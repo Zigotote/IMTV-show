@@ -14,7 +14,6 @@ export default {
   },
   computed: mapState(["shows"]),
   mounted() {
-    console.log("BEFORE MONTED");
     this.getShows();
   },
   methods: mapActions(["getShows"])
