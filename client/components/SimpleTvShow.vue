@@ -1,10 +1,41 @@
 <template>
-  <BListGroupItem>Test</BListGroupItem>
-  <!--<BCard>-->
+  <BCard
+    :title="title"
+    :img-src="img"
+    img-top
+    tag="article"
+    :sub-title="nbSeasons + ' saison(s)'"
+  >
+    <BCardText>{{ description }}</BCardText>
+  </BCard>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    img: {
+      type: String,
+      required: true
+    },
+    nbSeasons: {
+      type: String,
+      required: true
+    }
+  }
+};
 </script>
 
-<style></style>
+<style scoped>
+article {
+  max-width: 20rem;
+  max-height: 40rem;
+}
+</style>

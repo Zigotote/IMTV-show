@@ -21,6 +21,7 @@
             type="search"
             placeholder="Search"
             aria-label="Search"
+            :value="text"
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             <svg
@@ -48,7 +49,21 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      text: ""
+    };
+  },
+  computed: {
+    search: () => {
+      var shows = mapState(["shows"]);
+      return shows.filter(show => {
+        //return show.
+      });
+    }
+  }
+};
 </script>
 
 <style></style>

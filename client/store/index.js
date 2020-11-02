@@ -23,8 +23,8 @@ export const actions = {
   //delete
 };
 
-export const getters = {
+/*export const getters = {
   shows(state) {
     return state.shows;
   }
-};
+};*/
