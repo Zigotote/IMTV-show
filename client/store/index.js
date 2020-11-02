@@ -2,7 +2,8 @@ import axios from "axios";
 import Vue from "vue";
 
 export const state = () => ({
-  shows: []
+  shows: [],
+  searchText: ""
 });
 
 export const mutations = {
@@ -11,6 +12,9 @@ export const mutations = {
   },
   setShow(state, { index, newShow }) {
     Vue.set(state.shows, index, newShow);
+  },
+  setSearchText(state, searchText) {
+    state.searchText = searchText;
   }
 };
 
@@ -28,16 +32,13 @@ export const actions = {
     );
     context.commit("setShow", { index: index, newShow: data });
   }
-
-  //favori
-  //add
-  //update
-  //delete
 };
-/*
+
 export const getters = {
-  shows(state) {
-    return state.shows;
+  filteredShows(state) {
+    return state.shows.filter(
+      show =>
+        show.title.toUpperCase().indexOf(state.searchText.toUpperCase()) != -1
+    );
   }
 };
-*/

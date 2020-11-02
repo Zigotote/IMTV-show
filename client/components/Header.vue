@@ -21,7 +21,8 @@
             type="search"
             placeholder="Search"
             aria-label="Search"
-            :value="text"
+            :value="searchText"
+            @input="updateList"
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             <svg
@@ -49,18 +50,14 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
+
 export default {
-  data() {
-    return {
-      text: ""
-    };
-  },
-  computed: {
-    search: () => {
-      var shows = mapState(["shows"]);
-      return shows.filter(show => {
-        //return show.
-      });
+  computed: mapState(["searchText"]),
+  methods: {
+    ...mapMutations(["setSearchText"]),
+    updateList(event) {
+      this.setSearchText(event.srcElement.value);
     }
   }
 };

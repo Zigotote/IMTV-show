@@ -1,7 +1,7 @@
 <template>
   <BCardGroup columns>
     <SimpleTvShow
-      v-for="(show, index) in shows"
+      v-for="(show, index) in filteredShows"
       :key="show.id"
       :index="index"
       :idDb="show.id"
@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapGetters } from "vuex";
 import SimpleTvShow from "./SimpleTvShow";
 
 export default {
   components: {
     SimpleTvShow
   },
-  computed: mapState(["shows"])
+  computed: mapGetters(["filteredShows"])
 };
 </script>
 
