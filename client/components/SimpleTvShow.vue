@@ -6,13 +6,28 @@
     tag="article"
     :sub-title="nbSeasons + ' season(s)'"
   >
+    <BButton variant="outline" @click="toggleFavorited">
+      <div v-if="favorited">
+        <BIconHeartFill />
+      </div>
+      <div v-else><BIconHeart /></div>
+    </BButton>
     <BCardText>{{ description }}</BCardText>
   </BCard>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   props: {
+    index: {
+      type: Number,
+      required: true
+    },
+    idDb: {
+      type: Number,
+      required: true
+    },
     title: {
       type: String,
       required: true
@@ -28,6 +43,20 @@ export default {
     nbSeasons: {
       type: String,
       required: true
+    },
+    favorited: {
+      type: Boolean,
+      required: false
+    }
+  },
+  methods: {
+    ...mapActions(["setFavorited"]),
+    toggleFavorited() {
+      this.setFavorited({
+        index: this.index,
+        id: this.idDb,
+        favorited: !this.favorited
+      });
     }
   }
 };
