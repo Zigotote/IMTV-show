@@ -4,7 +4,7 @@
     :img-src="img"
     img-top
     tag="article"
-    :sub-title="nbSeasons + ' saison(s)'"
+    :sub-title="nbSeasons + ' season(s)'"
   >
     <BCardText>{{ description }}</BCardText>
   </BCard>
@@ -36,6 +36,5 @@ export default {
 <style scoped>
 article {
   max-width: 20rem;
-  max-height: 40rem;
 }
 </style>
