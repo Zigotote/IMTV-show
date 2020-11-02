@@ -1,0 +1,71 @@
+{
+  "id": 1161,
+  "thetvdb_id": 121361,
+  "imdb_id": "tt0944947",
+  "title": "Game of Thrones",
+  "original_title": "Game of Thrones",
+  "description": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and the icy horrors beyond.",
+  "seasons": "8",
+  "seasons_details": [
+    { "number": 1, "episodes": 10 },
+    { "number": 2, "episodes": 10 },
+    { "number": 3, "episodes": 10 },
+    { "number": 4, "episodes": 10 },
+    { "number": 5, "episodes": 10 },
+    { "number": 6, "episodes": 13 },
+    { "number": 7, "episodes": 9 },
+    { "number": 8, "episodes": 7 }
+  ],
+  "episodes": "79",
+  "followers": "220866",
+  "comments": "1380",
+  "similars": "42",
+  "characters": "79",
+  "creation": "2011",
+  "genres": ["Adventure", "Drama", "Fantasy"],
+  "length": "55",
+  "network": "HBO",
+  "rating": "TV-MA",
+  "status": "Ended",
+  "language": "en",
+  "notes": {
+    "total": 11120,
+    "mean": 4.7665,
+    "user": 0
+  },
+  "in_account": false,
+  "images": {
+    "show": "https://pictures.betaseries.com/fonds/show/1161_1521643782.jpg",
+    "banner": "https://pictures.betaseries.com/fonds/banner/1161_1502049726.jpg",
+    "box": "https://pictures.betaseries.com/fonds/box/1161_1502049726.jpg",
+    "poster": "https://pictures.betaseries.com/fonds/poster/bea491f2795b639a162a260a27453fc2.jpg"
+  },
+  "aliases": {
+    "1900": "Le Trône De Fer",
+    "6432": "Game of Thrones",
+    "14224": "Juego de Tronos"
+  },
+  "social_links": [
+    { "type": "facebook", "external_id": "GameOfThrones" },
+    { "type": "twitter", "external_id": "GameOfThrones" },
+    { "type": "instagram", "external_id": "gameofthrones" }
+  ],
+  "user": {
+    "archived": false,
+    "favorited": false,
+    "remaining": 0,
+    "status": 0,
+    "last": "S00E00",
+    "tags": null,
+    "next": {
+      "id": null,
+      "code": "S00E00",
+      "date": null,
+      "title": null,
+      "image": null
+    },
+    "friends_watching": []
+  },
+  "next_trailer": "5PxLidxnAE8",
+  "resource_url": "https://www.betaseries.com/serie/gameofthrones"
+}
