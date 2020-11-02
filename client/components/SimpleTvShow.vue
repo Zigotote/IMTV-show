@@ -13,6 +13,10 @@
       <div v-else><BIconHeart /></div>
     </BButton>
     <BCardText>{{ description }}</BCardText>
+
+    <NuxtLink :to="route">
+      <BButton>Details</BButton>
+    </NuxtLink>
   </BCard>
 </template>
 
@@ -47,6 +51,11 @@ export default {
     favorited: {
       type: Boolean,
       required: false
+    }
+  },
+  computed: {
+    route() {
+      return "tv-show/" + this.index;
     }
   },
   methods: {

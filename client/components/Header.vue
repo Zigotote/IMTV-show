@@ -24,7 +24,10 @@
             :value="searchText"
             @input="updateList"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button
+            class="btn btn-outline-success my-2 my-sm-0"
+            @click="event => event.preventDefault()"
+          >
             <svg
               width="1em"
               height="1em"
