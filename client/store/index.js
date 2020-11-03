@@ -3,7 +3,8 @@ import Vue from "vue";
 
 export const state = () => ({
   shows: [],
-  searchText: ""
+  searchText: "",
+  showDetails: {}
 });
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setSearchText(state, searchText) {
     state.searchText = searchText;
+  },
+  setShowDetails(state, show) {
+    state.showDetails = show;
   }
 };
 
@@ -23,6 +27,10 @@ export const actions = {
     const { data } = await axios.get("http://localhost:4000/rest/shows");
     context.commit("setShows", data);
   },
+  async getShow(context, id) {
+    const { data } = await axios.get(`http://localhost:4000/rest/shows/${id}`);
+    context.commit("setShowDetails", data);
+  },
   async setFavorited(context, { index, id, favorited }) {
     const { data } = await axios.post(
       `http://localhost:4000/rest/shows/${id}/favorites`,
@@ -30,7 +38,11 @@ export const actions = {
         isFavorite: favorited
       }
     );
-    context.commit("setShow", { index: index, newShow: data });
+    if (index) {
+      context.commit("setShow", { index: index, newShow: data });
+    } else {
+      context.commit("setShowDetails", data);
+    }
   }
 };
 

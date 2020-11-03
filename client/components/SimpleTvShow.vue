@@ -55,14 +55,14 @@ export default {
   },
   computed: {
     route() {
-      return "tv-show/" + this.index;
+      return "tv-show/" + this.idDb;
     }
   },
   methods: {
     ...mapActions(["setFavorited"]),
     toggleFavorited() {
       this.setFavorited({
-        index: this.index,
+        index: this.id,
         id: this.idDb,
         favorited: !this.favorited
       });
