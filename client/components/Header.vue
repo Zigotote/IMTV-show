@@ -13,8 +13,11 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        v-if="searchBar"
+      >
         <form class="form-inline my-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
@@ -56,6 +59,13 @@
 import { mapState, mapMutations } from "vuex";
 
 export default {
+  props: {
+    searchBar: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
   computed: mapState(["searchText"]),
   methods: {
     ...mapMutations(["setSearchText"]),

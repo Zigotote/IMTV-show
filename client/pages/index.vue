@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :searchBar="true" />
     <TVShowsList />
   </div>
 </template>
