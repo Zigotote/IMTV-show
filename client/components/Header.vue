@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">IMTV-Shows</a>
+      <a class="navbar-brand" href="/">IMTV-Shows</a>
       <button
         class="navbar-toggler"
         type="button"
