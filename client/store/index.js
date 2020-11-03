@@ -38,7 +38,7 @@ export const actions = {
         isFavorite: favorited
       }
     );
-    if (index) {
+    if (index >= 0) {
       context.commit("setShow", { index: index, newShow: data });
     } else {
       context.commit("setShowDetails", data);

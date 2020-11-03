@@ -62,7 +62,7 @@ export default {
     ...mapActions(["setFavorited"]),
     toggleFavorited() {
       this.setFavorited({
-        index: this.id,
+        index: this.index,
         id: this.idDb,
         favorited: !this.favorited
       });
